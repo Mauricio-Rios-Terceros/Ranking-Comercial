@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking Comercial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ranking del Equipo Comercial</h1>
+    <form id="rankingForm">
+        <label for="comercialRanking">Comercial:</label>
+        <input type="text" id="comercialRanking" required><br>
+        <label for="fechaRanking">Fecha:</label>
+        <input type="date" id="fechaRanking" required><br>
+        <label for="ventasTotalRanking">Ventas Total:</label>
+        <input type="number" step="0.01" id="ventasTotalRanking" required><br><br>
+        <button type="button" onclick="guardarRanking()">Guardar</button>
+        <button type="button" onclick="exportarExcel()">Exportar a Excel/CSV</button>
+    </form>
+
+    <h2>Ranking Registrado</h2>
+    <table id="rankingTable">
+        <thead>
+            <tr>
+                <th>Comercial</th>
+                <th>Fecha</th>
+                <th>Ventas Total</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

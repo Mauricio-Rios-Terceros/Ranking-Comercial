@@ -1,6 +1,6 @@
 function guardarRanking() {
     const comercial = document.getElementById('comercialRanking').value;
-    const fecha = document.getElementById('fechaRanking').value; // Ahora es texto
+    const fecha = document.getElementById('fechaRanking').value; // Fecha ahora es texto
     const ventasTotal = parseFloat(document.getElementById('ventasTotalRanking').value);
 
     if (!comercial || !fecha || !ventasTotal) {
@@ -40,4 +40,8 @@ function exportarExcel() {
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download
+    link.setAttribute("download", "ranking_comercial.csv");
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
